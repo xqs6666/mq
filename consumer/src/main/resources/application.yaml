@@ -2,8 +2,11 @@ server:
   port: 8001
 spring:
   rabbitmq:
-    addresses: 192.168.133.103
+    addresses: 172.16.2.81
     port: 5672
     virtual-host: /rabbitmq-stu
     username: xqs
     password: 1
+    listener:
+      simple:
+        prefetch: 1
